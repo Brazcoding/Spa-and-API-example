@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "server:watch": "nodemon --watch ./server -e js ./server/index.js",
+    "parcel-build": "parcel build index.html && cp _redirects ./dist/",
+    "serve": "parcel index.html"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,14 +16,18 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "1.19.1",
-    "stylelint": "^13.11.0",
+    "stylelint": "^9.3.0",
     "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-prettier": "^1.1.2",
     "stylelint-vscode": "^7.0.0-6"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12",
     "node": "^15.8.0",
-    "yargs-parser": ">=13.1.2"    
+    "nodemon": "^2.0.7",
+    "yargs-parser": ">=13.1.2"
   }
 }
